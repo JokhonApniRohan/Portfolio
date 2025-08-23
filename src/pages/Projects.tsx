@@ -15,8 +15,14 @@ const Projects = () => {
     {
       title: "Next-Day Rainfall Prediction",
       description: "Advanced time-series analysis model for weather forecasting with 82% accuracy. Utilizes multiple machine learning algorithms to predict rainfall patterns and help with agricultural and urban planning.",
-      technologies: ["Python", "scikit-learn", "TensorFlow", "Time Series", "Weather API", "Data Analysis"],
+      technologies: ["Python", "scikit-learn", "TensorFlow", "Time Series", "Data Analysis"],
+    },
+    {
+    title: "Imagination: Amusement Park Management Platform",
+    description: "Developed a comprehensive web platform for amusement park ticketing, enabling individual ride bookings, custom package creation, and admin features for price and ride management.",
+    technologies: ["HTML", "CSS", "JavaScript", "ExpressJS", "NodeJS"],
     }
+
   ];
 
   return (
