@@ -1,4 +1,4 @@
-import { GraduationCap, Calendar, Award } from 'lucide-react';
+import { GraduationCap, Calendar, Award, Download } from 'lucide-react';
 
 const About = () => {
   const education = [
@@ -43,10 +43,10 @@ const About = () => {
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
                 I'm <span className="text-primary font-semibold">Md Tawhidur Rahman</span>, 
-                a passionate AI and Machine Learning enthusiast currently pursuing my Bachelor's 
-                degree in Computer Science & Engineering at BRAC University. My journey in 
-                technology is driven by a deep fascination with artificial intelligence and 
-                its potential to solve complex real-world problems.
+                a Computer Science & Engineering graduate from BRAC University with a CGPA of 3.58. 
+                I am a passionate AI and Machine Learning enthusiast, driven by a deep fascination 
+                with artificial intelligence and its potential to solve complex real-world problems.
+
               </p>
               
               <p>
@@ -62,6 +62,19 @@ const About = () => {
                 NLP-based analysis tools, creating intelligent chatbots, or building predictive 
                 models, I approach every project with enthusiasm and a commitment to excellence.
               </p>
+
+              {/* Download CV Button */}
+              <div className="pt-6">
+                <a
+                  href="./Md_Tawhidur_Rahman_(CV)_20-08-2025.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg shadow hover:bg-primary/90 transition-all"
+                >
+                  <Download size={18} />
+                  Download CV
+                </a>
+              </div>
             </div>
           </div>
 
@@ -81,11 +94,13 @@ const About = () => {
                   )}
                   
                   <div className="flex items-start space-x-4">
-                    <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center ${
-                      edu.status === 'current' 
-                        ? 'bg-primary text-primary-foreground' 
-                        : 'bg-secondary text-secondary-foreground'
-                    }`}>
+                    <div
+                      className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center ${
+                        edu.status === 'current' 
+                          ? 'bg-primary text-primary-foreground' 
+                          : 'bg-secondary text-secondary-foreground'
+                      }`}
+                    >
                       {edu.status === 'current' ? <Calendar size={20} /> : <Award size={20} />}
                     </div>
                     
