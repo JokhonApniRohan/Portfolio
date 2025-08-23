@@ -60,7 +60,7 @@ const Skills = () => {
               icon={skill.icon}
               title={skill.title}
               skills={skill.skills}
-              level={skill.level}
+
             />
           ))}
         </div>
@@ -74,8 +74,10 @@ const Skills = () => {
               <h3 className="text-lg font-semibold text-foreground mb-4">Development & Tools</h3>
               <div className="space-y-2 text-muted-foreground">
                 <div>• Git & Version Control</div>
+
                 <div>• REST API Development</div>
                 <div>• Jupyter Notebooks</div>
+                <div>• Cloud Computing (AWS, GCP)</div>
               </div>
             </div>
             

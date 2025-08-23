@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Mail, Phone, Linkedin, Github, MapPin, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,17 +12,35 @@ const Contact = () => {
     email: '',
     message: ''
   });
-  
+
+  const formRef = useRef<HTMLFormElement>(null);
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
+
+    if (!formRef.current) return;
+
+    emailjs.sendForm(
+      'contact_tawhid',      // Replace with your EmailJS Service ID
+      'contact_tawhid_template',     // Replace with your EmailJS Template ID
+      formRef.current,
+      'Z2nncVa8BWU9xUIp7'       // Replace with your EmailJS Public Key
+    )
+    .then(() => {
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your message. I'll get back to you soon!",
+      });
+      setFormData({ name: '', email: '', message: '' });
+    })
+    .catch(() => {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
     });
-    setFormData({ name: '', email: '', message: '' });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -113,8 +132,8 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="portfolio-card">
             <h2 className="heading-md mb-6 text-foreground">Send a Message</h2>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
+
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                   Name
@@ -168,6 +187,8 @@ const Contact = () => {
                 Send Message
               </Button>
             </form>
+
+
           </div>
         </div>
       </div>
