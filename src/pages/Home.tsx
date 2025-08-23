@@ -42,7 +42,7 @@ const Home = () => {
             <Link to="/projects">
               <Button className="btn-primary hover-glow">
                 View My Projects
-                <ArrowDown size={20} className="ml-2" />
+                
               </Button>
             </Link>
             
@@ -54,20 +54,15 @@ const Home = () => {
             </Link>
           </div>
 
-          {/* Quick Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-16 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">10+</div>
-              <div className="text-sm text-muted-foreground">Projects</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">3.58</div>
-              <div className="text-sm text-muted-foreground">CGPA</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">82%</div>
-              <div className="text-sm text-muted-foreground">ML Accuracy</div>
-            </div>
+        {/* Quick Stats */}
+        <div className="flex justify-center pt-5 min-h-screen">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-primary">10+</div>
+            <div className="text-sm text-muted-foreground">Projects</div>
+          </div>
+
+            
+
           </div>
         </div>
       </div>
