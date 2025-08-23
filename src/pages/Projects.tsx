@@ -32,7 +32,7 @@ const Projects = () => {
         <div className="text-center mb-16">
           <h1 className="heading-lg text-foreground mb-6">My Projects</h1>
           <p className="text-large max-w-2xl mx-auto leading-relaxed">
-            Explore my portfolio of AI and Machine Learning projects that solve real-world problems
+            Explore my portfolio with AI, Machine Learning and web development projects that solve real-world problems
           </p>
         </div>
 

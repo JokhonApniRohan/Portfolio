@@ -7,37 +7,37 @@ const Skills = () => {
       icon: <Brain size={32} />,
       title: "Artificial Intelligence",
       skills: ["Machine Learning", "Deep Learning", "Neural Networks", "Computer Vision", "Reinforcement Learning"],
-      level: 90
+
     },
     {
       icon: <MessageSquare size={32} />,
       title: "Natural Language Processing",
       skills: ["BERT", "RoBERTa", "Transformers", "Text Analysis", "Sentiment Analysis", "Language Models"],
-      level: 85
+
     },
     {
       icon: <Code size={32} />,
       title: "Programming Languages",
-      skills: ["Python", "JavaScript", "SQL", "R", "Java", "C++"],
-      level: 88
+      skills: ["Python", "JavaScript", "SQL", "HTML", "CSS", "C++"],
+
     },
     {
       icon: <Database size={32} />,
       title: "Data Science & Analytics",
       skills: ["pandas", "NumPy", "scikit-learn", "TensorFlow", "PyTorch", "Data Visualization"],
-      level: 92
+
     },
     {
       icon: <TrendingUp size={32} />,
       title: "Machine Learning Models",
       skills: ["LSTM", "GRU", "KNN", "SVM", "Random Forest", "Time Series Analysis"],
-      level: 87
+
     },
     {
       icon: <Lightbulb size={32} />,
       title: "Specialized Tools",
       skills: ["LangChain", "RAG Systems", "Chatbot Development", "API Integration", "Cloud Platforms"],
-      level: 80
+
     }
   ];
 
@@ -74,10 +74,8 @@ const Skills = () => {
               <h3 className="text-lg font-semibold text-foreground mb-4">Development & Tools</h3>
               <div className="space-y-2 text-muted-foreground">
                 <div>• Git & Version Control</div>
-                <div>• Docker & Containerization</div>
                 <div>• REST API Development</div>
                 <div>• Jupyter Notebooks</div>
-                <div>• Cloud Computing (AWS, GCP)</div>
               </div>
             </div>
             
