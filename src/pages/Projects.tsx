@@ -21,35 +21,35 @@ const Projects = () => {
       description:
         "Created a regression-based model to predict housing prices based on location, room count, and amenities, using scikit-learn and pandas.",
       technologies: ["Python", "scikit-learn", "pandas"],
-      githubUrl: "https://github.com/JokhonApniRohan/housing-price-prediction"
+      githubUrl: "https://github.com/JokhonApniRohan/Housing-Price-Prediction"
     },
     {
       title: "Pandemic Tweet Sentiment Analysis",
       description:
         "Designed an NLP pipeline to classify Twitter sentiments during the pandemic using deep learning models like LSTM, GRU, and BERT.",
       technologies: ["Python", "LSTM", "GRU", "BERT"],
-      githubUrl: "https://github.com/JokhonApniRohan/pandemic-tweet-sentiment"
+      githubUrl: "https://github.com/JokhonApniRohan/Categorising_Sentiments_of_Pandemic_Tweet-NLP"
     },
     {
       title: "Car Price Prediction System",
       description:
         "Implemented a machine learning model to estimate car prices based on brand, model, year, and specifications using multiple algorithms in scikit-learn.",
       technologies: ["Python", "scikit-learn", "pandas"],
-      githubUrl: "https://github.com/JokhonApniRohan/car-price-prediction"
+      githubUrl: "https://github.com/JokhonApniRohan/car_price_prediction"
     },
     {
       title: "GoNuts: Concert Management System",
       description:
         "Engineered a web application for concert ticketing and management, featuring venue details, ticket purchasing, and merchandise options, built with HTML, CSS, and ExpressJS for a seamless user experience.",
       technologies: ["HTML", "CSS", "JavaScript", "ExpressJS"],
-      githubUrl: "https://github.com/JokhonApniRohan/gonuts-concert-management"
+      githubUrl: "https://github.com/JokhonApniRohan/GoNuts"
     },
     {
       title: "Imagination: Amusement Park Management Platform",
       description:
         "Developed a comprehensive web platform for amusement park ticketing, enabling individual ride bookings, custom package creation, and admin features for price and ride management.",
       technologies: ["HTML", "CSS", "JavaScript", "ExpressJS", "NodeJS"],
-      githubUrl: "https://github.com/JokhonApniRohan/imagination-amusement-park"
+      githubUrl: "https://github.com/JokhonApniRohan/Amusement-Park-Management-System"
     }
   ];
 
@@ -73,6 +73,7 @@ const Projects = () => {
               description={project.description}
               technologies={project.technologies}
               githubUrl={project.githubUrl}
+              className="h-[420px]" // uniform height
             />
           ))}
         </div>
