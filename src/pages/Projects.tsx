@@ -2,11 +2,7 @@ import ProjectCard from '@/components/ProjectCard';
 
 const Projects = () => {
   const projects = [
-    {
-      title: "Corporate Vitality Insight",
-      description: "An advanced NLP-based company analysis system that provides comprehensive insights into corporate health, performance metrics, and market positioning using state-of-the-art machine learning models.",
-      technologies: ["BERT", "RoBERTa", "LSTM", "GRU", "KNN", "SVM", "Random Forest", "pandas", "Python"],
-    },
+
     {
       title: "Bus Route Chatbot",
       description: "Intelligent RAG-based assistant designed to help navigate Dhaka's complex public transportation system. Provides real-time route information, scheduling, and optimal path recommendations.",
