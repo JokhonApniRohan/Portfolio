@@ -19,7 +19,7 @@ const ProjectCard = ({
   githubUrl 
 }: ProjectCardProps) => {
   return (
-    <div className="portfolio-card group">
+    <div className="portfolio-card group bg-white dark:bg-gray-900 rounded-xl shadow-md p-5 border border-gray-200 dark:border-gray-700 transition-all">
       {image && (
         <div className="mb-4 overflow-hidden rounded-lg">
           <img 
@@ -48,17 +48,17 @@ const ProjectCard = ({
           ))}
         </div>
         
-        <div className="flex gap-3 pt-2">
+        <div className="flex justify-center gap-3 pt-2">
           {demoUrl && (
-            <Button size="sm" className="btn-primary">
+            <Button size="sm" className="btn-primary" onClick={() => window.open(demoUrl, "_blank")}>
               <ExternalLink size={16} className="mr-2" />
               Demo
             </Button>
           )}
           {githubUrl && (
-            <Button variant="outline" size="sm">
+            <Button size="sm" className="btn-primary" onClick={() => window.open(githubUrl, "_blank")}>
               <Github size={16} className="mr-2" />
-              Code
+              View Project on Github
             </Button>
           )}
         </div>
