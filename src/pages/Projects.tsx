@@ -2,6 +2,19 @@ import ProjectCard from '@/components/ProjectCard';
 
 const Projects = () => {
   const projects = [
+    // {
+    //   title: "",
+    //   description:
+    //     "Coming Soon"
+      
+    // },
+    {
+      title: "Speech Transription + Sentiment Analysis",
+      description:
+        "",
+      technologies: ['Coming Soon'],
+      githubUrl: ""
+    },
     {
       title: "Bus Route Chatbot",
       description:
@@ -51,6 +64,7 @@ const Projects = () => {
       technologies: ["HTML", "CSS", "JavaScript", "ExpressJS", "NodeJS"],
       githubUrl: "https://github.com/JokhonApniRohan/Amusement-Park-Management-System"
     }
+
   ];
 
   return (
