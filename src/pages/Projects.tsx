@@ -8,13 +8,15 @@ const Projects = () => {
     //     "Coming Soon"
       
     // },
+    
     {
-      title: "Speech Transription + Sentiment Analysis",
+      title: "NLP-Based Company State Analysis",
       description:
-        "",
-      technologies: ['Coming Soon'],
+        "Developed a system to evaluate company performance using NLP by analyzing financial reports, stock market trends, news articles, and public reviews. Built as part of my undergraduate thesis project.",
+      technologies: ["Python", "Node.js", "React.js", "NLP", "Data Analysis"],
       githubUrl: ""
     },
+
     {
       title: "Bus Route Chatbot",
       description:
@@ -63,7 +65,14 @@ const Projects = () => {
         "Developed a comprehensive web platform for amusement park ticketing, enabling individual ride bookings, custom package creation, and admin features for price and ride management.",
       technologies: ["HTML", "CSS", "JavaScript", "ExpressJS", "NodeJS"],
       githubUrl: "https://github.com/JokhonApniRohan/Amusement-Park-Management-System"
-    }
+    },
+    {
+      title: "Speech Transription + Sentiment Analysis",
+      description:
+        "",
+      technologies: ['Coming Soon'],
+      githubUrl: ""
+    },
 
   ];
 
