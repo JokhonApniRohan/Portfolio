@@ -66,7 +66,7 @@ const About = () => {
               {/* Download CV Button */}
               <div className="pt-6 flex justify-center">
                 <a
-                  href="./Md_Tawhidur_Rahman_(CV)_24-08-2025.pdf"
+                  href="./CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg shadow hover:bg-primary/90 transition-all"
