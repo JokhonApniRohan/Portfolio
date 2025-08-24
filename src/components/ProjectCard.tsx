@@ -66,7 +66,7 @@ const ProjectCard = ({
         {githubUrl && (
           <Button size="sm" className="btn-primary" onClick={() => window.open(githubUrl, "_blank")}>
             <Github size={16} className="mr-2" />
-            View Project on Github
+            View Project on GitHub
           </Button>
         )}
       </div>
