@@ -50,17 +50,34 @@ const Contact = () => {
     });
   };
 
+  // Function to handle Gmail redirection intelligently
+  const handleGmailClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+
+    const email = "tawhidr19@gmail.com";
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // Try to open Gmail app directly on mobile
+      window.location.href = `mailto:${email}`;
+    } else {
+      // Open Gmail compose page on desktop
+      window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`, '_blank');
+    }
+  };
+
   const contactInfo = [
     {
       icon: <Mail size={24} />,
       label: "Email",
       value: "tawhidr19@gmail.com",
-      href: "mailto:tawhidr19@gmail.com"
+      href: "#", // We will handle Gmail opening manually
+      onClick: handleGmailClick
     },
     {
       icon: <Phone size={24} />,
       label: "Phone",
-      value: "01316082876",
+      value: "+8801316082876",
       href: "tel:01316082876"
     },
     {
@@ -98,6 +115,7 @@ const Contact = () => {
                   <a
                     key={index}
                     href={info.href}
+                    onClick={info.onClick}
                     target={info.href.startsWith('http') ? '_blank' : undefined}
                     rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     className="flex items-center space-x-4 p-4 rounded-lg border border-border hover:bg-muted transition-colors group"
@@ -187,8 +205,6 @@ const Contact = () => {
                 Send Message
               </Button>
             </form>
-
-
           </div>
         </div>
       </div>
